@@ -6,7 +6,7 @@ const numberVariable = 11;
 console.log("numberVariable:>>", numberVariable);
 
 const boolValue = true;
-console.log("boolValue :>>", boolValue);
+console.log("boolValue:>>", boolValue);
 
 const stringVariable = "java script";
 console.log("stringVariable:>>", stringVariable);
@@ -50,58 +50,103 @@ console.log("z :>>", z);
 // num = num – 1;
 
 let num = 1;
-console.log("num :>>", num);
+console.log("num", num);
 
 let num2 = 1;
 num2 += 11;
-console.log("num2 :>>", num2);
+console.log("num2", num2);
 
 let num3 = 1;
 num3 -= 11;
-console.log("num3 :>>", num3);
+console.log("num3", num3);
 
 let num4 = 1;
 num4 *= 11;
-console.log("num4 :>>", num4);
+console.log("num4", num4);
 
 let num5 = 1;
 num5 /= 11;
-console.log("num5 :>>", num5);
+console.log("num5", num5);
 
 let num6 = 1;
 num6++;
-console.log("num6 :>>", num6);
+console.log("num6", num6);
 
 let num7 = 1;
 num7--;
-console.log("num7 :>>", num7);
+console.log("num7", num7);
 
 //JS. Введення/виведення даних
 //1. . Запитайте число у користувача (prompt), піднесіть його до квадрату і виведіть результат (alert).
 
-// const inputValue = Number(prompt("Введіть число:"));
-// console.log("inputValue ** 2 =", inputValue ** 2);
-// alert("Число піднесене до квадрату");
+const inputValue = Number(prompt("Введіть число:"));
+console.log("inputV =", inputValue ** 2);
+alert("Число піднесене до квадрату");
 
-// // 2.Виведіть середнє арифметичне двох чисел. Числа запитувати у користувача.
-// const inputValue1 = Number(prompt("Введіть перше число:"));
-// const inputValue2 = Number(prompt("Введіть друге число:"));
-// const averageValue = (inputValue1 + inputValue2) / 2;
-// console.log("averageValue", averageValue);
-// alert("Середнє значення");
+// 2.Виведіть середнє арифметичне двох чисел. Числа запитувати у користувача.
+const inputValue1 = Number(prompt("Введіть перше число:"));
+const inputValue2 = Number(prompt("Введіть друге число:"));
+const averageValue = (inputValue1 + inputValue2) / 2;
+console.log("averageValue", averageValue);
+alert("Середнє значення " + averageValue);
 
 //3. Переведіть кількість хвилин на секунди та виведіть результат. Число хвилин запитувати у користувача.
 
-// const Minutes = Number(prompt("Введіть хвилини:"));
-// const seconds = Minutes * 60;
-// console.log("seconds", seconds);
-// alert("Хвилини");
+const minutes = Number(prompt("Введіть хвилини:"));
+const seconds = minutes * 60;
+console.log("seconds", seconds);
+alert("Секунди " + seconds);
 
 //4. Створіть змінну greeting зі значенням 'Hello,' і оголосіть змінну userName. Запитайте ім'я користувача
 // та внесіть це значення у змінну userName. Виведіть повідомлення з привітанням, наприклад, 'Hello, Vasia!'. (згадайте про конкатенацію)
 
-let greeting = "Hello";
+let greeting = "Hello ";
 let userName;
-const notification = greeting + userName;
-userName = prompt("ім^я користувача:");
+userName = prompt("ім'я користувача:");
+const notification = greeting + " " + userName;
 alert(notification);
+
+//_JS. Умови________________________________________________
+
+//Запитати змінну у користувача (prompt). Якщо введена змінна дорівнює числу 10, виведіть рядок 'Вірно', інакше виведіть рядок 'Невірно' (if).
+
+const inputVariable = Number(prompt("Введіть змінну"));
+if (inputVariable === 10) {
+  console.log("Вірно");
+} else console.log("Невірно");
+
+// 2. Напишіть дві перевірки за допомогою if.
+// Задати значення змінної в скрипті при оголошенні (const test = true; // або false)
+// Якщо змінна test дорівнює true, виведіть рядок '1 Вірно', інакше виведіть рядок '1 Невірно'.
+// Якщо змінна test не дорівнює true, то виведіть рядок '2 Вірно', інакше виведіть рядок '2 Невірно'
+// Перевірте роботу скрипта при test, що дорівнює true, потім при test, що дорівнює false.
+
+const test1 = true;
+if (test1) {
+  console.log("Вірно");
+} else {
+  console.log("Невірно");
+}
+
+const test2 = true;
+if (!test2) {
+  console.log("Вірно");
+} else {
+  console.log("Невірно");
+}
+
+//3. Обчисліть суму покупки з урахуванням знижки.
+// Користувач вводе суму знижки (prompt).
+// Якщо сума покупки більша за 500 грн. (але менше/дорівнює 800), то надається знижка 3%,
+// якщо сума покупки більша за 800 грн. -- знижка 5%.
+// В інших випадках знижка не надається.
+// Вивести суму, яку має заплатити користувач.
+
+console summ =Number(prompt("Введіть суму покупки"));
+if (summ >= 500 && total < 800) {
+  console.log ( "Ваша знижка" + summ * 0.03 + "грн");
+} else if (summ >= 800) {
+  console.log ( "Ваша знижка" + summ * 0.05 + "грн");
+} 
+else {console.log ("На жаль, знижка не надається");
+}
